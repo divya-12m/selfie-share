@@ -42,8 +42,13 @@ popTrigger.onclick = function(){
 }
 function imageUpload(dataURI){
     var Blob=dataURItoBlob(dataURI);
-    
-    var data = new FormData();
+// var fd = new FormData(document.forms[0]);
+// var xhr = new XMLHttpRequest();
+
+// fd.append("myFile", Blob);
+// xhr.open('POST', "http://40.117.87.175:8080/GenesisV1/uploadFileNew", true);
+// xhr.send(fd);
+var data = new FormData();
 data.append("file", Blob);
 
 var xhr = new XMLHttpRequest();
